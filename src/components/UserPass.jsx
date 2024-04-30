@@ -12,7 +12,7 @@ function UserName() {
     };
 
     const handleChange = (e) => {
-        nameInput= e.target.value;
+        nameInput = e.target.value;
     };
 
     return (
@@ -46,11 +46,11 @@ function Password() {
 
 
 function Submit(props) {
-    
+
     let endpoint = props.endpoint;
 
     const doPost = async () => {
-    if (nameInput === "" || passInput === "") return;
+        if (nameInput === "" || passInput === "") return;
 
         const data = {
             user: nameInput,
@@ -65,8 +65,8 @@ function Submit(props) {
         });
 
 
-        if(!response.ok){
-            return<h1>An error occured</h1>
+        if (!response.ok) {
+            return <h1>An error occured</h1>
         }
     }
 
@@ -78,12 +78,18 @@ function Submit(props) {
 
 
 export default function userPassPage(props) {
-    
+
     return (<>
-        <div className="UserPass">
-            <UserName />
-            <Password />
-            <Submit endpoint ={props.endpoint}/>
+        <div >
+            <div>
+                <UserName />
+            </div>
+            <div>
+                <Password />
+            </div>
+            <div>
+                <Submit endpoint={props.endpoint} />
+            </div>
         </div>
     </>)
 }
