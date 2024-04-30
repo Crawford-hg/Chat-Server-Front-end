@@ -1,10 +1,14 @@
 
 import './App.css'
-import Register from './components/register'
+// import UserPass from './components/UserPass'
+import Landing from './components/landing'
 
 function App() {
 
-  return <Register/>
+  return (
+    <Landing/>
+  )
+
 }
 
 export default App
